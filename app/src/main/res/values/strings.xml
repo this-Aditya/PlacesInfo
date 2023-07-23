@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PlacesInfo</string>
+    <string name="et_place_id_info">Enter the place ID:</string>
+    <string name="button_details">Get Details</string>
+    <string name="details_input_hint">Enter a place id</string>
+    <string name="details_input_default">ChIJ-fIL2vnvTxkRaNUY32NGBYs</string>
 </resources>
