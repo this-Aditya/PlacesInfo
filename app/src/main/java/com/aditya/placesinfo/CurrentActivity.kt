@@ -60,8 +60,8 @@ class CurrentActivity : AppCompatActivity() {
         binding = ActivityCurrentBinding.inflate(layoutInflater)
         setContentView(binding.root)
         placesClient = Places.createClient(this)
-        currentPlace = binding.currentButton
-        responseView = binding.currentResponseContent
+        currentPlace = binding.currentPlace
+        responseView = binding.currentResponsePlace
         permissioner = PermissionHandler()
 //        responseView.setTextIsSelectable(true)
 //        responseView.isEnabled = false

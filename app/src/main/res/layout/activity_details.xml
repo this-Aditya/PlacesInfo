@@ -13,23 +13,23 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/details_input"
+            android:id="@+id/id_input"
             android:layout_width="match_parent"
             android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:hint="@string/details_input_hint"
-            android:text="@string/details_input_default" />
+            android:hint="@string/details_input_hint"/>
+<!--            android:text="@string/details_input_default" />-->
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/details_button"
+        android:id="@+id/btn_get_place"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_details" />
 
     <TextView
-        android:id="@+id/details_response_content"
+        android:id="@+id/response_from_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"

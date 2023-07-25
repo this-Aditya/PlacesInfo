@@ -28,8 +28,8 @@ class DetailsActivity : AppCompatActivity() {
         placesClient = Places.createClient(this)
 
 
-        binding.detailsButton.setOnClickListener {
-            val placeId = binding.detailsInput.text.toString()
+        binding.btnGetPlace.setOnClickListener {
+            val placeId = binding.idInput.text.toString()
             val placeField = listOf(
                     Place.Field.NAME,
                     Place.Field.ID,
@@ -40,11 +40,11 @@ class DetailsActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 try {
                     val response: FetchPlaceResponse = placesClient.awaitFetchPlace(placeId, placeField)
-                    binding.detailsResponseContent.text = response.toString()
+                    binding.responseFromId.text = response.toString()
                     Log.i(TAG, "Response received: \n $response")
                 } catch (ex: Exception) {
                     Log.w(TAG, "Exception while fetching the place: $ex")
-                    binding.detailsResponseContent.text = ex.message.toString()
+                    binding.responseFromId.text = ex.message.toString()
                 }
             }
         }

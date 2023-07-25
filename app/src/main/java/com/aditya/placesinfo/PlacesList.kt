@@ -6,7 +6,7 @@ import androidx.annotation.StringRes
 enum class PlacesList(
     @StringRes val title: Int,
     @StringRes val description: Int,
-    val activity: Class<out Activity>
+    val activity: Class<out Activity>,
 ) {
 
     DETAILS_FRAGMENT_DEMO(
@@ -19,6 +19,12 @@ enum class PlacesList(
         R.string.current_demo_title,
         R.string.current_demo_description,
         CurrentActivity::class.java
+    ),
+
+    AUTOCOMPLETE_FRAGMENT(
+        R.string.autocomplete_places,
+        R.string.provides_an_aitcompletion_of_places_when_you_type_any_place,
+        AutocompleteActivity::class.java
     )
 
 }
