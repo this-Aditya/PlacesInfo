@@ -7,6 +7,7 @@ import androidx.lifecycle.lifecycleScope
 import com.aditya.placesinfo.databinding.ActivityDetailsBinding
 import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
+import com.google.android.libraries.places.api.net.FetchPlaceResponse
 import com.google.android.libraries.places.api.net.PlacesClient
 import com.google.android.libraries.places.ktx.api.net.awaitFetchPlace
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -38,7 +39,7 @@ class DetailsActivity : AppCompatActivity() {
             )
             lifecycleScope.launch {
                 try {
-                    val response = placesClient.awaitFetchPlace(placeId, placeField)
+                    val response: FetchPlaceResponse = placesClient.awaitFetchPlace(placeId, placeField)
                     binding.detailsResponseContent.text = response.toString()
                     Log.i(TAG, "Response received: \n $response")
                 } catch (ex: Exception) {

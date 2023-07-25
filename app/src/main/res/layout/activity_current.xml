@@ -13,8 +13,9 @@
 
     <TextView
         android:id="@+id/current_response_content"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:paddingTop="16dp"
         android:scrollbars = "vertical"
         android:textIsSelectable="true" />
